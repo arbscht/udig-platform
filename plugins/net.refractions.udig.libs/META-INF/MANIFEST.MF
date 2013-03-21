@@ -179,7 +179,8 @@ Bundle-ClassPath: .,
  lib/groovy-1.8.8.jar,
  lib/itext-2.1.7.jar,
  lib/gt-geojson-9-SNAPSHOT.jar,
- lib/json-simple-1.1.jar
+ lib/json-simple-1.1.jar,
+ lib/groovy-1.8.9.jar
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Export-Package: .,
  antlr,
