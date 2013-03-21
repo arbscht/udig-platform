@@ -172,10 +172,7 @@ public final class ProjectPlugin extends EMFPlugin {
                             .getResources();
                     for( Iterator<Resource> iter = resources.iterator(); iter.hasNext(); ) {
                         Resource resource = (Resource) iter.next();
-                        if (resource.getContents().isEmpty()) {
-                            ProjectPlugin.log("Not saving " + resource.getURI()+" empty contents"); //$NON-NLS-1$
-                            continue;
-                        }
+                        if (resource.getContents().isEmpty()) continue;
                         Object next = resource.getAllContents().next();
                         if (resource.isModified() && next != null && !((EObject) next).eIsProxy()) {
                             try {
