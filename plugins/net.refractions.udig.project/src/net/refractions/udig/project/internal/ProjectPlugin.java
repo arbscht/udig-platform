@@ -288,8 +288,12 @@ public final class ProjectPlugin extends EMFPlugin {
      */
     private static void trace( String message, Throwable e ) {
         if (getPlugin().isDebugging()) {
-            if (message != null) System.out.println(message + "\n"); //$NON-NLS-1$
-            if (e != null) e.printStackTrace(System.out);
+            if (message != null) {
+                System.out.println(message);
+            }
+            if (e != null) {
+                e.printStackTrace(System.out);
+            }
         }
     }
     /**
@@ -310,7 +314,7 @@ public final class ProjectPlugin extends EMFPlugin {
      * @param e exception, may be null.
      */
     public static void trace( Class caller, String message, Throwable e ) {
-        trace("Tracing - " + caller.getSimpleName() + ": " + message, e); //$NON-NLS-1$ //$NON-NLS-2$
+        trace(caller.getSimpleName() + ": " + message, e); //$NON-NLS-1$ //$NON-NLS-2$
     }
 
     /**
